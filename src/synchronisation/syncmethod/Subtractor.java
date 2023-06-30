@@ -1,4 +1,4 @@
-package synchronisation.addersubtractorsynchronised;
+package synchronisation.syncmethod;
 
 public class Subtractor implements Runnable {
     private Count count;
@@ -10,9 +10,7 @@ public class Subtractor implements Runnable {
     @Override
     public void run() {
         for (int i = 1; i <= 10000; i++) {
-            synchronized (count) { // lock
-                count.value -= i;
-            } // unlock
+            count.incrementValue(-i);
         }
     }
 }

@@ -1,4 +1,4 @@
-package synchronisation.addersubtractorsynchronised;
+package synchronisation.syncmethod;
 
 public class Client {
     public static void main(String[] args) throws InterruptedException {
@@ -16,6 +16,10 @@ public class Client {
         t1.join();
         t2.join();
 
-        System.out.println(count.value);
+        System.out.println(count.getValue());
+
+        //1. MUTEX -> LOCK
+        //2. synchronized block.
+        //3. synchronized method.
     }
 }
