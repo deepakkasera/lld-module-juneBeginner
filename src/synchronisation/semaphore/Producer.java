@@ -28,7 +28,11 @@ public class Producer implements Runnable {
 //            } catch (InterruptedException e) {
 //                throw new RuntimeException(e);
 //            }
-            producerSemaphore.acquire();
+            try {
+                producerSemaphore.acquire();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(this.name + " is producing, size = " + store.size());
             store.add(new Object());
             consumerSemaphore.release(); //notify the consumer.
