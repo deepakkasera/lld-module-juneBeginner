@@ -10,7 +10,8 @@ public class Client {
 
         HelloWorldPrinter helloWorldPrinter = new HelloWorldPrinter();
         Thread t = new Thread(helloWorldPrinter);
-        t.start();
+        t.start(); // start() method runs a task in a separate new thread.
+        //t.run(); -> run() doesn't work in a separate thread.
 
         System.out.println("Bye..Printed By : " + Thread.currentThread().getName());
     }
