@@ -12,6 +12,11 @@ public class Client {
         aug22IntellgentStudent.setBatch("August 22 Intermediate");
         aug22IntellgentStudent.setAverageBatchPsp(75.0);
         registry.register("aug22IS", aug22IntellgentStudent);
+
+        Student sept22 = new Student();
+        sept22.setAverageBatchPsp(90.0);
+        sept22.setBatch("Sept22 Intermediate");
+        registry.register("sept22", sept22);
     }
     public static void main(String[] args) {
         StudentRegistry studentRegistry = new StudentRegistry();
