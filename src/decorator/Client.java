@@ -3,7 +3,7 @@ package decorator;
 public class Client {
     public static void main(String[] args) {
         IceCream iceCream =
-                new ChocoChips(
+                new ChocolateCone(
                         new StrawberryScoop(
                                 new ChocolateCone(
                                         new ChocoChips(
@@ -19,3 +19,6 @@ public class Client {
         System.out.println(iceCream.getCost());
     }
 }
+
+//Pizza Shop
+
